@@ -89,6 +89,7 @@ attr_reader :name, :species
     cats.each do |cat|
       cat.mood = "nervous"
       cat.owner = nil
+    end
     # dogs.each {|dog| dog.mood = "nervous"}
     # dogs.each {|dog| dog.owner = nil}
     # cats.each {|cat| cat.mood = "nervous"}
