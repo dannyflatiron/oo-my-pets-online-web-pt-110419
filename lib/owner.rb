@@ -35,7 +35,7 @@ attr_reader :name, :species
   end
 
   def cats
-    # returns a collection of all the cats that belong to the owner
+    # returns a collection of all the cats that belong to an owner
     # where is the collection of cats?....its in the Cats class
     # how do I call on that collection in the Owner class? It would be Cats.all
     # how do I return the Cat that matches to a specific owner?
@@ -71,7 +71,7 @@ attr_reader :name, :species
     # Dog.all represents all the dogs and its an array data type
     # we need to access the mood attribute in each instance of a dog so we will use map
     # change string value of the mood attribute to happy
-    Dog.all.map {|dog| dog.mood = "happy"}
+    dogs.all.map {|dog| dog.mood = "happy"}
 
   end
 
