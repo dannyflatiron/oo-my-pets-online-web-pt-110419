@@ -82,7 +82,7 @@ attr_reader :name, :species
 
   def sell_pets
     dogs.each do |dog|
-      dog.mood = "nervous" 
+      dog.mood = "nervous"
       dog.owner = nil
     end
 
