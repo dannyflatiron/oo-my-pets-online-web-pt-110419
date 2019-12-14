@@ -81,10 +81,18 @@ attr_reader :name, :species
   end
 
   def sell_pets
-    Dog.all.map {|dog| dog.mood = "nervous"}
-    Dog.all.map {|dog| dog.owner = nil}
-    Cat.all.map {|cat| cat.mood = "nervous"}
-    Cat.all.map {|cat| cat.owner = nil}
+    dogs.each do |dog|
+      dog.mood = "nervous" 
+      dog.owner = nil
+    end
+
+    cats.each do |cat|
+      cat.mood = "nervous"
+      cat.owner = nil
+    # dogs.each {|dog| dog.mood = "nervous"}
+    # dogs.each {|dog| dog.owner = nil}
+    # cats.each {|cat| cat.mood = "nervous"}
+    # cats.each {|cat| cat.owner = nil}
   end
 
   def list_pets
