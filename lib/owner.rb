@@ -41,6 +41,7 @@ attr_reader :name, :species
     # how do I return the Cat that matches to a specific owner?
     # Cat.all is an array but I need to return exact instances how? Which method to use?
     Cat.all.select {|cat_array| cat_array.owner == self}
+    # select returns an array of values that are true giveen the condition in the block
     # select returns values that are true given the condition in the block
     # cat_owner represents each object within the Cat.all array
     # .owner looks at the owner value for each object instance
@@ -71,12 +72,12 @@ attr_reader :name, :species
     # Dog.all represents all the dogs and its an array data type
     # we need to access the mood attribute in each instance of a dog so we will use map
     # change string value of the mood attribute to happy
-    dogs.all.map {|dog| dog.mood = "happy"}
+    dogs.each {|dog| dog.mood = "happy"}
 
   end
 
   def feed_cats
-    Cat.all.map {|cat| cat.mood = "happy"}
+    cats.each {|cat| cat.mood = "happy"}
   end
 
   def sell_pets
